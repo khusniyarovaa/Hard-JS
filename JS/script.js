@@ -1,3 +1,6 @@
+"use strict";
+
+// Задание №1
 
 // 1 Создать переменную num со значением 266219 (тип данных число)
 let num = 266219;
@@ -64,6 +67,73 @@ console.log(strn);
 // // метод 3
 // let strn = Number(String(cube).substring (0, 2));
 // console.log(strn);
+
+
+// Задание №2
+// Необходимо выполнить в отдельном JS файле, подключенному к отдельной HTML странице
+// 1). Переменная lang может принимать 2 значения: 'ru' 'en'.
+// Написать условия при котором в зависимости от значения lang будут выводится дни недели на русском или английском языке. Решите задачу
+//  a) через if,
+ let lang = 'ru';
+
+ if (lang == 'ru') {
+   console.log("Понедельник");
+   console.log("Вторник");
+   console.log("Среда");
+   console.log("Четверг");
+   console.log("Пятница");
+   console.log("Суббота");
+   console.log("Воскресенье");
+ 
+ } else if (lang == 'en') {
+   console.log("Monday");
+   console.log("Tuesday");
+   console.log("Wednesday");
+   console.log("Thursday");
+   console.log("Friday");
+   console.log("Saturday");
+   console.log("Sunday");
+ }
+ 
+//  b) через switch-case
+switch (lang) {
+  case 'ru':
+    console.log("Понедельник");
+    console.log("Вторник");
+    console.log("Среда");
+    console.log("Четверг");
+    console.log("Пятница");
+    console.log("Суббота");
+    console.log("Воскресенье");
+    break
+
+  case 'en':
+    console.log("Monday");
+    console.log("Tuesday");
+    console.log("Wednesday");
+    console.log("Thursday");
+    console.log("Friday");
+    console.log("Saturday");
+    console.log("Sunday");
+    break  
+}
+
+//  c) через многомерный массив без ифов и switch. 
+let array = [];
+array['ru'] = ['Понедельник','Вторник','Среда','Четверг','Пятница','Суббота','Воскресенье'];
+array['en'] = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+console.log(array[lang]);
+
+
+// 2). У нас есть переменная namePerson. Если значение этой переменной “Артем” то вывести в консоль “директор”, 
+// если значение “Александр” то вывести в консоль “преподаватель”, с любым другим значением вывести в консоль “студент”
+//  Решить задачу с помощью нескольких тернарных операторов, без использования if или switch 
+
+let namePerson = 'Александр'
+namePerson === 'Артем' ? console.log('директор') : namePerson === 'Александр' ? console.log('преподаватель') : console.log('студент')
+
+
+
 
 
 
