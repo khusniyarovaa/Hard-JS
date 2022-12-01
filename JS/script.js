@@ -218,3 +218,25 @@ for (let i = 2; i <= 100; i++) {
 
 //   console.log(i, "Делители этого числа: 1 и " + i ); 
 // }
+
+
+// Урок №7
+
+let week = ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье'];
+let day = document.getElementById('day'); 
+let todayDay = new Date();
+
+week.forEach(function(item, i) {
+    let newItem = document.createElement('div'); 
+    if (i === (6 + new Date().getDay()) % 7) { 
+      newItem.style.fontWeight = "bold";
+        newItem.textContent = week[i];
+    }
+    if (item == 'Суббота' || item == 'Воскресенье') { 
+      newItem.style.fontStyle = "italic";
+        newItem.textContent = week[i]; 
+    } else {
+        newItem.textContent = week[i];
+    }
+    day.append(newItem);
+});
